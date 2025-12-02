@@ -10,13 +10,11 @@
 
 1.3 Technologies \& Tools
 
-•	Language: C++ (ISO Standard) 
+•	Language: C++ (ISO Standard)
 
-•	Design: UML Class Diagrams 
+•	Design: UML Class Diagrams
 
-•	Version Control: Git (Branching and Integration) 
+•	Version Control: Git (Branching and Integration)
 
-•	Build System: CMake / Replit 
-
-
+•	Build System: CMake / Replit
 
