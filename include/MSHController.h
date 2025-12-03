@@ -1,41 +1,27 @@
-#ifndef MSHCONTROLLER_H
-#define MSHCONTROLLER_H
+#ifndef MSH_CONTROLLER_H
+#define MSH_CONTROLLER_H
 
-// Forward declarations to avoid circular dependencies
-class DeviceManager;
-class LogManager;
-class ModeManager;
-class StateManager;
-class SecurityManager;
-class DetectionManager;
+#include <memory> // Needed for std::unique_ptr (Smart Pointers)
+
+// Include the Manager headers
+#include "LogManager.h"        // Existing file
+#include "DeviceManagerBase.h" // New interface
+#include "ModeManagerBase.h"   // New interface
+#include "StateManagerBase.h"  // New interface
 
 class MSHController {
-private:
-    // Singleton Instance
-    static MSHController* instance;
-
-    // Pointers to Subsystems (Facade Pattern)
-    DeviceManager* deviceMgr;
-    LogManager* logMgr;
-    ModeManager* modeMgr;
-    StateManager* stateMgr;
-    SecurityManager* securityMgr;
-    DetectionManager* detectionMgr;
-
-    // Private Constructor for Singleton
-    MSHController();
-
 public:
-    // Singleton Accessor
-    static MSHController* getInstance();
-
-    // Core System Functions
-    void init();
+    // Basic class structure
+    MSHController(); 
     void run();
-    void shutdown();
-    
-    // Facade Methods (Routing menu commands to managers)
-    void processMenuOption(int option);
+    virtual ~MSHController() = default;
+
+private:
+    // The four required pointers to the Manager Systems
+    std::unique_ptr<LogManager> m_logManager;
+    std::unique_ptr<DeviceManagerBase> m_deviceManager;
+    std::unique_ptr<ModeManagerBase> m_modeManager;
+    std::unique_ptr<StateManagerBase> m_stateManager;
 };
 
-#endif // MSHCONTROLLER_H
+#endif // MSH_CONTROLLER_H
