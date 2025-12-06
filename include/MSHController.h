@@ -14,7 +14,16 @@ public:
     // Basic class structure
     MSHController(); 
     void run();
-    virtual ~MSHController() = default;
+    bool processCommand(int choice);
+    virtual ~MSHController();
+
+    // Actions invoked by menu
+    void addDevice();
+    void removeDevice();
+    void changeMode();
+    void changeState();
+    void getHomeStatus();
+    void runSimulation();
 
 private:
     // The four required pointers to the Manager Systems

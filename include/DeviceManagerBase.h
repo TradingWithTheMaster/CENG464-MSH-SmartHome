@@ -1,12 +1,16 @@
 #ifndef DEVICE_MANAGER_BASE_H
 #define DEVICE_MANAGER_BASE_H
 
+#include <string>
+
 class DeviceManagerBase {
 public:
-    // A virtual destructor is critical for proper cleanup when using pointers to base classes
-    virtual ~DeviceManagerBase() = default; 
-
-    // Add pure virtual methods (functions = 0) here later, but for now, the skeleton is enough.
+    virtual ~DeviceManagerBase() = default;
+    virtual void addDevice(const std::string& name) = 0;
+    virtual void removeDevice(const std::string& name) = 0;
+    virtual void setPowerState(const std::string& name, bool on) = 0;
+    virtual std::string getStatus() = 0;
+    virtual void simulateLightFailure(const std::string& name) = 0;
 };
 
 #endif // DEVICE_MANAGER_BASE_H

@@ -1,10 +1,14 @@
-#ifndef DEVICE_MANAGER_BASE_H
-#define DEVICE_MANAGER_BASE_H
+#ifndef STATE_MANAGER_BASE_H
+#define STATE_MANAGER_BASE_H
 
-class DeviceManagerBase {
+#include <string>
+
+class StateManagerBase {
 public:
-    virtual ~DeviceManagerBase() = default; 
-
+    virtual ~StateManagerBase() = default;
+    virtual void changeState(const std::string& state) = 0;
+    virtual void displayStatus() = 0;
+    virtual void updateSensors() = 0;
 };
 
-#endif // DEVICE_MANAGER_BASE_H
+#endif // STATE_MANAGER_BASE_H
