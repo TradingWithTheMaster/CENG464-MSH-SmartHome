@@ -144,3 +144,30 @@ void MSHController::shutdown() {
     cout << "Shutting down system...\n";
     m_logManager->log("SYSTEM", "Shutdown requested.");
 }
+void MSHController::powerOnDevice() {
+    std::string name;
+    std::cout << "Device to power ON: ";
+    std::getline(std::cin, name);
+
+    if (name.empty()) {
+        std::cout << "No device entered.\n";
+        return;
+    }
+
+    m_deviceManager->setPowerState(name, true);
+    m_logManager->log("INFO", "powerOnDevice: " + name);
+}
+
+void MSHController::powerOffDevice() {
+    std::string name;
+    std::cout << "Device to power OFF: ";
+    std::getline(std::cin, name);
+
+    if (name.empty()) {
+        std::cout << "No device entered.\n";
+        return;
+    }
+
+    m_deviceManager->setPowerState(name, false);
+    m_logManager->log("INFO", "powerOffDevice: " + name);
+}

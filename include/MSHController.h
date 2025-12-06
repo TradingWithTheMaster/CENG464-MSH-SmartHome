@@ -27,6 +27,8 @@ public:
     void runScenarioSimulation();   // renamed from runSimulation()
     void about();
     void shutdown();
+    void powerOnDevice();
+void powerOffDevice();
 
 private:
     LogManager* m_logManager;  // no unique_ptr — owned by main
