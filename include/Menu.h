@@ -13,6 +13,7 @@ public:
     void displayWelcome();
     int getUserSelection();
     void displayMessage(const std::string& msg);
+    void run(class MSHController* controller);
 };
 
 #endif
