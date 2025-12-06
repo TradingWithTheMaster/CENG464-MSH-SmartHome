@@ -1,24 +1,30 @@
-#include <iostream>            // 1. Standard libraries first
-#include "MSHController.h"     // 2. Then your main controller header
+#include "MSHController.h"
+#include "Menu.h"
+#include "LogManager.h"
+#include <iostream>
 
-// The entry point of the entire application
+// Entry point of the Smart Home System
 int main() {
-    std::cout << "Initializing Smart Home System components...\n";
-
-    // Create the main controller instance (The 'Driver')
-    MSHController controller;
-
-    // Start the main execution loop
-    try {
-        controller.run(); 
-    } catch (const std::exception& e) {
-        std::cerr << "A CRITICAL error occurred and the system shut down: " << e.what() << "\n";
-        return 1; // Indicate failure
-    } catch (...) {
-        std::cerr << "An unknown critical error occurred.\n";
-        return 1;
+    LogManager logManager;
+    if (!logManager.init("msh_log.txt")) {
+        std::cerr << "Warning: Could not open log file.\n";
     }
 
+    // Create controller with logging support
+    MSHController controller(&logManager);
+
+    // If your controller has initialize(), keep it. Otherwise remove.
+    // controller.initialize();
+
+    // Create and run the menu system
+    Menu menu(&controller);
+    menu.run();
+
+    // If your controller has cleanup(), keep it. Otherwise remove.
+    // controller.cleanup();
+
+    logManager.shutdown();
+
     std::cout << "Smart Home System Shut Down Gracefully.\n";
-    return 0; // Indicate success
+    return 0;
 }
