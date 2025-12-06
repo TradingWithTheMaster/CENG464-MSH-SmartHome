@@ -1,0 +1,15 @@
+[2025-12-06 23:38:35] [INFO] System Log Initialized.
+[2025-12-06 23:38:35] [INFO] DeviceManager initialized.
+[2025-12-06 23:38:35] [INFO] ModeManager initialized (Home mode).
+[2025-12-06 23:38:35] [INFO] StateManager initialized.
+[2025-12-06 23:38:35] [INFO] MSHController initialized.
+[2025-12-06 23:38:35] [ALERT] Starting simulation.
+[2025-12-06 23:38:38] [EVENT] Smoke detector activated.
+[2025-12-06 23:38:38] [INFO] User acknowledged alarm.
+[2025-12-06 23:38:38] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[2025-12-06 23:38:38] [INFO] Simulation complete.
+[2025-12-06 23:38:38] [INFO] MSHController shutting down.
+[2025-12-06 23:38:38] [INFO] StateManager shutting down.
+[2025-12-06 23:38:38] [INFO] ModeManager shutting down.
+[2025-12-06 23:38:38] [INFO] DeviceManager shutting down.
+[2025-12-06 23:38:38] [INFO] System Log Closed.
