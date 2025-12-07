@@ -1,9 +1,12 @@
 #include "ModeManager.h"
 
-ModeManager::ModeManager() : currentMode(Mode::NORMAL) {}
+ModeManager::ModeManager(LogManager* logger)
+    : currentMode(Mode::NORMAL), logManager(logger) {}
 
 void ModeManager::setMode(Mode newMode) {
     currentMode = newMode;
+    if (logManager)
+        logManager->log("Mode changed to: " + modeToString(newMode));
 }
 
 Mode ModeManager::getCurrentMode() const {
