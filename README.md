@@ -1,14 +1,14 @@
 # My Sweet Home (MSH) – CENG464 Term Project
 
-## 🏠 Overview
+##  Overview
 My Sweet Home (MSH) is a smart home simulation system developed for the CENG464 Design Patterns with C++ course.  
 It provides a menu‑driven interface that allows users to manage IoT devices, control home modes and states, and simulate emergency scenarios such as smoke detection, motion detection, and device failures.
 
 This project demonstrates modular architecture, design patterns, and team-based integration using Git.
 
----
 
-## ✅ Features
+
+##  Features
 - Interactive command-line menu
 - Add/remove devices:
   - Light
@@ -34,9 +34,8 @@ This project demonstrates modular architecture, design patterns, and team-based 
 - Configuration cloning for batch device creation
 - Persistent logging of all operations
 
----
 
-## ✅ Architecture Summary
+##  Architecture Summary
 ### **Core Components**
 - **MSHController** – Central coordinator of all operations
 - **Managers**:
@@ -61,9 +60,8 @@ This project demonstrates modular architecture, design patterns, and team-based 
 - **State Pattern** – System state transitions
 - **Strategy Pattern** – Mode behavior
 
----
 
-## ✅ Folder Structure
+##  Folder Structure
 ```
 CENG464-MSH-SmartHome/
 │
@@ -76,16 +74,15 @@ CENG464-MSH-SmartHome/
 ├── CMakeLists.txt
 ├── README.md
 └── msh_log.txt
-```
 
----
 
-## ✅ Build Instructions
+
+
+##  Build Instructions
 
 ### **Using g++**
 ```bash
 g++ -I include src/*.cpp -o msh.exe
-```
 
 ### **Using CMake**
 ```bash
@@ -95,16 +92,16 @@ cmake ..
 make
 ```
 
----
 
-## ✅ Run the Program
+
+##  Run the Program
 ```bash
 ./msh.exe
 ```
 
----
 
-## ✅ Screenshots
+
+##  Screenshots
 All screenshots of:
 - Menu operations  
 - Device management  
@@ -114,17 +111,16 @@ All screenshots of:
 
 are included in the `docs/screenshots/` folder and the final report.
 
----
 
-## ✅ Team Members
+
+##  Team Members
 - Khalid — Integrator, architecture, debugging, scenario simulation  
 - Amin — Device modules, simulation logic  
 - Anas — Menu system, state management  
 - Mohamed — Device headers, Git workflow  
 
----
 
-## ✅ Notes
+##  Notes
 This project was developed using:
 - C++98  
 - Git for version control  
