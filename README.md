@@ -1,46 +1,135 @@
-# CENG464-MSH-SmartHome
+# My Sweet Home (MSH) – CENG464 Term Project
 
+## 🏠 Overview
+My Sweet Home (MSH) is a smart home simulation system developed for the CENG464 Design Patterns with C++ course.  
+It provides a menu‑driven interface that allows users to manage IoT devices, control home modes and states, and simulate emergency scenarios such as smoke detection, motion detection, and device failures.
 
-1\. Introduction
+This project demonstrates modular architecture, design patterns, and team-based integration using Git.
 
-1.1 Project Overview "My Sweet Home" (MSH) project aims to design and develop a comprehensive smart home management system using C++ and Object-Oriented Programming principles. The system is designed to be a central control panel that manages various IoT devices, including lights, cameras, smart TVs, and safety detectors (smoke and gas). The core objective of this project is to demonstrate the practical implementation of industry-standard Design Patterns (such as Factory, State, and Facade) to solve complex architectural challenges.
+---
 
-1.2 Purpose and Scope The MSH system provides a text-based user interface (Menu) which gives the users the ability to add/remove devices, control power states, and switch between various home "Modes" (Normal, Evening, Party, Cinema) that provides specified settings depending on the user’s preference. Additionally, the system includes critical safety and security features, such as automated alarm sequences for motion detection and fire hazards. The software is designed to be extensible, maintainable, and robust, utilizing a layered architecture that separates device logic from system control logic.
+## ✅ Features
+- Interactive command-line menu
+- Add/remove devices:
+  - Light
+  - Camera
+  - TV (Samsung/LG)
+  - Smoke & Gas Detector
+- Power devices on/off (with safety restrictions)
+- Change home modes:
+  - Normal
+  - Evening
+  - Party
+  - Cinema
+- Change system states:
+  - Normal
+  - Sleep
+  - High Performance
+  - Previous State
+- Scenario simulation:
+  - Smoke alarm with countdown
+  - Motion detection (security system)
+  - Police call
+  - Light failure + SMS notification
+- Configuration cloning for batch device creation
+- Persistent logging of all operations
 
-1.3 Technologies \& Tools
+---
 
-•	Language: C++ (ISO Standard)
+## ✅ Architecture Summary
+### **Core Components**
+- **MSHController** – Central coordinator of all operations
+- **Managers**:
+  - DeviceManager
+  - ModeManager
+  - StateManager
+  - DetectionManager
+  - SecurityManager
+  - LogManager
 
-•	Design: UML Class Diagrams
+### **Device Hierarchy**
+- Base class: `Device`
+- Derived classes:
+  - `Light`
+  - `Camera`
+  - `TV` (Samsung, LG)
+  - `Detector` (Smoke & Gas)
 
-•	Version Control: Git (Branching and Integration)
+### **Design Patterns Used**
+- **Factory Pattern** – Device creation
+- **Singleton Pattern** – Managers & Controller
+- **State Pattern** – System state transitions
+- **Strategy Pattern** – Mode behavior
 
-•	Build System: CMake / Replit
+---
 
-=======
-1. Introduction
-1.1 Project Overview
-The My Sweet Home (MSH) project is a foundational C++ endeavor focused on developing a comprehensive smart home management system. Our primary objective was designing a robust, extensible core to simulate a central control panel that manages various IoT devices, including smart TVs, cameras, lighting units, and critical safety detectors. The project’s core goal is to showcase the practical application of industry-standard Design Patterns—specifically the Factory, State, and Facade patterns—to solve complex architectural and maintenance challenges.
+## ✅ Folder Structure
+```
+CENG464-MSH-SmartHome/
+│
+├── include/        # Header files
+├── src/            # Source files
+├── docs/           # Reports, scenario, screenshots
+├── logs/           # Runtime logs
+├── build/          # Build output
+│
+├── CMakeLists.txt
+├── README.md
+└── msh_log.txt
+```
 
+---
 
+## ✅ Build Instructions
 
-1.2 Purpose and Scope
-The MSH system provides users with a flexible, text-based Menu interface for essential device management, enabling them to quickly add, remove, and adjust device power states. It facilitates seamless switching between predefined Home Modes (Normal, Evening, Party, Cinema) to instantly adjust the environment based on user preference. Furthermore, the system incorporates critical automated safety and security sequences for intrusion detection and fire response. Our final software architecture is intentionally layered, ensuring the clear separation of device logic from system control for maximum extensibility and maintainability.
+### **Using g++**
+```bash
+g++ -I include src/*.cpp -o msh.exe
+```
 
+### **Using CMake**
+```bash
+mkdir build
+cd build
+cmake ..
+make
+```
 
+---
 
-1.3 Technologies & Tools
-This project adheres to modern development standards and utilizes the following key tools:
+## ✅ Run the Program
+```bash
+./msh.exe
+```
 
+---
 
-Language: C++ (ISO Standard).
+## ✅ Screenshots
+All screenshots of:
+- Menu operations  
+- Device management  
+- Mode/state changes  
+- Scenario simulation  
+- Git commit history  
 
+are included in the `docs/screenshots/` folder and the final report.
 
-Design: UML Class Diagrams for structural modeling.
+---
 
+## ✅ Team Members
+- Khalid — Integrator, architecture, debugging, scenario simulation  
+- Amin — Device modules, simulation logic  
+- Anas — Menu system, state management  
+- Mohamed — Device headers, Git workflow  
 
-Version Control: Git, emphasizing branching and integration for collaborative development.
+---
 
+## ✅ Notes
+This project was developed using:
+- C++98  
+- Git for version control  
+- Modular architecture  
+- Team-based integration  
 
-Build System: CMake / Replit.
->>>>>>> dfd61a9c802731500a612338c717b53aa7b27726
+The final report and presentation are included in the `docs/` folder.
+
