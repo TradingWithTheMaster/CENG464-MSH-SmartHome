@@ -1,0 +1,17 @@
+[2025-12-07 00:06:08] [INFO] System Log Initialized.
+[2025-12-07 00:06:08] [INFO] DeviceManager initialized.
+[2025-12-07 00:06:08] [INFO] ModeManager initialized (Home mode).
+[2025-12-07 00:06:08] [INFO] StateManager initialized.
+[2025-12-07 00:06:08] [INFO] MSHController initialized.
+[2025-12-07 00:06:16] [INFO] getHomeStatus called.
+[2025-12-07 00:06:16] [INFO] Device status requested.
+[2025-12-07 00:06:16] [INFO] Displaying state: OK
+[2025-12-07 00:07:06] [INFO] Device added: Camera
+[2025-12-07 00:07:06] [INFO] addDevice: Camera
+[2025-12-07 00:07:16] [INFO] Device removed: camera
+[2025-12-07 00:07:16] [INFO] removeDevice: camera
+[2025-12-07 00:07:42] [INFO] MSHController shutting down.
+[2025-12-07 00:07:42] [INFO] StateManager shutting down.
+[2025-12-07 00:07:42] [INFO] ModeManager shutting down.
+[2025-12-07 00:07:42] [INFO] DeviceManager shutting down.
+[2025-12-07 00:07:42] [INFO] System Log Closed.

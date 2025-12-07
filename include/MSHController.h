@@ -8,6 +8,8 @@
 #include "DeviceManagerBase.h"
 #include "ModeManagerBase.h"
 #include "StateManagerBase.h"
+#include "SecurityManager.h"
+#include "DetectionManager.h"
 
 class MSHController {
 public:
@@ -36,6 +38,8 @@ private:
     std::unique_ptr<DeviceManagerBase> m_deviceManager;
     std::unique_ptr<ModeManagerBase>   m_modeManager;
     std::unique_ptr<StateManagerBase>  m_stateManager;
+    std::unique_ptr<SecurityManager> m_securityManager;
+std::unique_ptr<DetectionManager> m_detectionManager;
 };
 
 #endif

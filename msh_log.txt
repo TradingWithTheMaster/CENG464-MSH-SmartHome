@@ -1,0 +1,253 @@
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 00:35:43 2025
+=========================
+[Sun Dec  7 00:35:43 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 00:35:43 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 00:35:43 2025] [INFO] StateManager initialized.
+[Sun Dec  7 00:35:43 2025] [INFO] MSHController initialized.
+[Sun Dec  7 00:36:09 2025] [INFO] getHomeStatus called.
+[Sun Dec  7 00:36:09 2025] [INFO] Device status requested.
+[Sun Dec  7 00:36:09 2025] [INFO] Displaying state: OK
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 00:49:42 2025
+=========================
+[Sun Dec  7 00:49:42 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 00:49:42 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 00:49:42 2025] [INFO] StateManager initialized.
+[Sun Dec  7 00:49:42 2025] [INFO] MSHController initialized.
+[Sun Dec  7 00:49:46 2025] [INFO] getHomeStatus called.
+[Sun Dec  7 00:49:46 2025] [INFO] Device status requested.
+[Sun Dec  7 00:49:46 2025] [INFO] Displaying state: OK
+[Sun Dec  7 00:52:26 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 00:52:29 2025] [EVENT] Smoke detector activated.
+[Sun Dec  7 00:52:30 2025] [INFO] User acknowledged alarm.
+[Sun Dec  7 00:52:30 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 00:52:30 2025] [INFO] Simulation complete.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 00:56:40 2025
+=========================
+[Sun Dec  7 00:56:40 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 00:56:40 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 00:56:40 2025] [INFO] StateManager initialized.
+[Sun Dec  7 00:56:40 2025] [INFO] MSHController initialized.
+[Sun Dec  7 00:56:52 2025] [INFO] Device added: alarm
+[Sun Dec  7 00:56:52 2025] [INFO] addDevice: alarm
+[Sun Dec  7 00:57:05 2025] [INFO] Power OFF for alarm
+[Sun Dec  7 00:57:05 2025] [INFO] powerOffDevice: alarm
+[Sun Dec  7 00:59:40 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 00:59:43 2025] [EVENT] Smoke detector activated.
+[Sun Dec  7 00:59:51 2025] [INFO] User acknowledged alarm.
+[Sun Dec  7 00:59:51 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 00:59:51 2025] [INFO] Simulation complete.
+[Sun Dec  7 01:00:01 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 01:00:04 2025] [EVENT] Smoke detector activated.
+[Sun Dec  7 01:00:14 2025] [ALERT] No acknowledgement. Escalating.
+[Sun Dec  7 01:00:14 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 01:00:14 2025] [INFO] AllLights turned ON.
+[Sun Dec  7 01:00:14 2025] [ALERT] Police called.
+[Sun Dec  7 01:00:14 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 01:00:14 2025] [INFO] Simulation complete.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 16:43:02 2025
+=========================
+[Sun Dec  7 16:43:02 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 16:43:02 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 16:43:02 2025] [INFO] StateManager initialized.
+[Sun Dec  7 16:43:02 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 16:43:02 2025] [INFO] MSHController initialized.
+[Sun Dec  7 16:43:20 2025] [INFO] getHomeStatus called.
+[Sun Dec  7 16:43:20 2025] [INFO] Device status requested.
+[Sun Dec  7 16:43:20 2025] [INFO] Displaying state: OK
+[Sun Dec  7 16:43:53 2025] [INFO] Device added: Light1
+[Sun Dec  7 16:43:53 2025] [INFO] addDevice: Light1
+[Sun Dec  7 16:44:12 2025] [INFO] Device removed: 1
+[Sun Dec  7 16:44:12 2025] [INFO] removeDevice: 1
+[Sun Dec  7 16:44:23 2025] [INFO] Power ON for Light1
+[Sun Dec  7 16:44:23 2025] [INFO] powerOnDevice: Light1
+[Sun Dec  7 16:44:46 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 16:44:49 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 16:44:49 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 16:44:59 2025] [ALERT] No acknowledgement. Escalating.
+[Sun Dec  7 16:44:59 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 16:44:59 2025] [INFO] AllLights turned ON.
+[Sun Dec  7 16:44:59 2025] [ALERT] DetectionManager: Calling police...
+[Sun Dec  7 16:44:59 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 16:44:59 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 16:44:59 2025] [INFO] Simulation complete.
+[Sun Dec  7 16:46:58 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 16:47:01 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 16:47:01 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 16:47:11 2025] [ALERT] No acknowledgement. Escalating.
+[Sun Dec  7 16:47:11 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 16:47:11 2025] [INFO] AllLights turned ON.
+[Sun Dec  7 16:47:11 2025] [ALERT] DetectionManager: Calling police...
+[Sun Dec  7 16:47:11 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 16:47:11 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 16:47:11 2025] [INFO] Simulation complete.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 17:05:46 2025
+=========================
+[Sun Dec  7 17:05:46 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 17:05:46 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 17:05:46 2025] [INFO] StateManager initialized.
+[Sun Dec  7 17:05:46 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 17:05:46 2025] [INFO] MSHController initialized.
+[Sun Dec  7 17:05:50 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:05:53 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:05:53 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:06:03 2025] [ALERT] No acknowledgement. Escalating.
+[Sun Dec  7 17:06:03 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 17:06:03 2025] [INFO] AllLights turned ON.
+[Sun Dec  7 17:06:03 2025] [ALERT] DetectionManager: Calling police...
+[Sun Dec  7 17:06:03 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 17:06:03 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 17:06:03 2025] [INFO] Simulation complete.
+[Sun Dec  7 17:07:29 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:07:32 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:07:32 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:07:42 2025] [ALERT] No acknowledgement. Escalating.
+[Sun Dec  7 17:07:42 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 17:07:42 2025] [INFO] AllLights turned ON.
+[Sun Dec  7 17:07:42 2025] [ALERT] DetectionManager: Calling police...
+[Sun Dec  7 17:07:42 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 17:07:42 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 17:07:42 2025] [INFO] Simulation complete.
+[Sun Dec  7 17:08:04 2025] [SYSTEM] Shutdown requested.
+[SYSTEM] MSH shutting down.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 17:08:18 2025
+=========================
+[Sun Dec  7 17:08:18 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 17:08:18 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 17:08:18 2025] [INFO] StateManager initialized.
+[Sun Dec  7 17:08:18 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 17:08:18 2025] [INFO] MSHController initialized.
+[Sun Dec  7 17:08:21 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:08:24 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:08:24 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:08:34 2025] [ALERT] No acknowledgement. Escalating.
+[Sun Dec  7 17:08:34 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 17:08:34 2025] [INFO] AllLights turned ON.
+[Sun Dec  7 17:08:34 2025] [ALERT] DetectionManager: Calling police...
+[Sun Dec  7 17:08:34 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 17:08:34 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 17:08:34 2025] [INFO] Simulation complete.
+[Sun Dec  7 17:12:44 2025] [SYSTEM] Shutdown requested.
+[SYSTEM] MSH shutting down.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 17:12:57 2025
+=========================
+[Sun Dec  7 17:12:57 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 17:12:57 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 17:12:57 2025] [INFO] StateManager initialized.
+[Sun Dec  7 17:12:57 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 17:12:57 2025] [INFO] MSHController initialized.
+[Sun Dec  7 17:12:59 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:13:02 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:13:02 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:13:44 2025] [INFO] Alarm acknowledged by user.
+[Sun Dec  7 17:13:44 2025] [INFO] User acknowledged alarm.
+[Sun Dec  7 17:13:44 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 17:13:44 2025] [INFO] Simulation complete.
+[Sun Dec  7 17:13:50 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:13:53 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:13:53 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:15:00 2025] [INFO] Alarm acknowledged by user.
+[Sun Dec  7 17:15:00 2025] [INFO] User acknowledged alarm.
+[Sun Dec  7 17:15:00 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 17:15:00 2025] [INFO] Simulation complete.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 17:15:10 2025
+=========================
+[Sun Dec  7 17:15:10 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 17:15:10 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 17:15:10 2025] [INFO] StateManager initialized.
+[Sun Dec  7 17:15:10 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 17:15:10 2025] [INFO] MSHController initialized.
+[Sun Dec  7 17:15:12 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:15:15 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:15:15 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:15:25 2025] [ALERT] No acknowledgement. Escalating.
+[Sun Dec  7 17:15:25 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 17:15:25 2025] [INFO] AllLights turned ON.
+[Sun Dec  7 17:15:25 2025] [ALERT] DetectionManager: Calling police...
+[Sun Dec  7 17:15:25 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 17:15:25 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 17:15:25 2025] [INFO] Simulation complete.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 17:18:05 2025
+=========================
+[Sun Dec  7 17:18:05 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 17:18:05 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 17:18:05 2025] [INFO] StateManager initialized.
+[Sun Dec  7 17:18:05 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 17:18:05 2025] [INFO] MSHController initialized.
+[Sun Dec  7 17:18:08 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:18:11 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:18:11 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:18:21 2025] [ALERT] No acknowledgement. Escalating.
+[Sun Dec  7 17:18:21 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 17:18:21 2025] [INFO] AllLights turned ON.
+[Sun Dec  7 17:18:21 2025] [ALERT] DetectionManager: Calling police...
+[Sun Dec  7 17:18:21 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 17:18:21 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 17:18:21 2025] [INFO] Simulation complete.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 17:21:23 2025
+=========================
+[Sun Dec  7 17:21:23 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 17:21:23 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 17:21:23 2025] [INFO] StateManager initialized.
+[Sun Dec  7 17:21:23 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 17:21:23 2025] [INFO] MSHController initialized.
+[Sun Dec  7 17:21:24 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:21:27 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:21:27 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:21:37 2025] [ALERT] No acknowledgement. Escalating.
+[Sun Dec  7 17:21:37 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 17:21:37 2025] [ALERT] DetectionManager: Calling police...
+[Sun Dec  7 17:21:37 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 17:21:37 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 17:21:37 2025] [INFO] Simulation complete.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 17:23:44 2025
+=========================
+[Sun Dec  7 17:23:44 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 17:23:44 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 17:23:44 2025] [INFO] StateManager initialized.
+[Sun Dec  7 17:23:44 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 17:23:44 2025] [INFO] MSHController initialized.
+[Sun Dec  7 17:23:45 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:23:48 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:23:48 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:23:58 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 17:23:58 2025] [ALERT] DetectionManager: Calling police...
+[Sun Dec  7 17:23:58 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 17:23:58 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 17:23:58 2025] [ALERT] Escalation triggered.
+[Sun Dec  7 17:23:58 2025] [INFO] Simulation complete.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 17:25:39 2025
+=========================
+[Sun Dec  7 17:25:39 2025] [INFO] DeviceManager initialized.
+[Sun Dec  7 17:25:39 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 17:25:39 2025] [INFO] StateManager initialized.
+[Sun Dec  7 17:25:39 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 17:25:39 2025] [INFO] MSHController initialized.
+[Sun Dec  7 17:25:40 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:25:43 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:25:43 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:25:53 2025] [INFO] Power ON for AllLights
+[Sun Dec  7 17:25:53 2025] [ALERT] DetectionManager: Calling police...
+[Sun Dec  7 17:25:53 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 17:25:53 2025] [ERROR] Light failure on LivingRoomLight. Sending SMS to owner.
+[Sun Dec  7 17:25:53 2025] [ALERT] Escalation triggered.
+[Sun Dec  7 17:25:53 2025] [INFO] Simulation complete.
+[Sun Dec  7 17:26:15 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 17:26:18 2025] [ALERT] DetectionManager: Triggering alarm...
+[Sun Dec  7 17:26:18 2025] [ALERT] Alarm triggered: Forced alarm trigger
+[Sun Dec  7 17:26:21 2025] [INFO] Alarm acknowledged by user.
+[Sun Dec  7 17:26:21 2025] [INFO] User acknowledged alarm.
+[Sun Dec  7 17:26:21 2025] [INFO] Simulation complete.
+[Sun Dec  7 17:28:27 2025] [SYSTEM] Shutdown requested.
+[SYSTEM] MSH shutting down.
