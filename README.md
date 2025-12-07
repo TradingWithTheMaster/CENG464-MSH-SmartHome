@@ -1,6 +1,4 @@
 # CENG464-MSH-SmartHome
-<<<<<<< HEAD
-
 
 
 1\. Introduction
