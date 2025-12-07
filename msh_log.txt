@@ -251,3 +251,56 @@
 [Sun Dec  7 17:26:21 2025] [INFO] Simulation complete.
 [Sun Dec  7 17:28:27 2025] [SYSTEM] Shutdown requested.
 [SYSTEM] MSH shutting down.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 18:22:54 2025
+=========================
+[Sun Dec  7 18:22:54 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 18:22:54 2025] [INFO] StateManager initialized.
+[Sun Dec  7 18:22:54 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 18:22:54 2025] [INFO] MSHController initialized.
+[Sun Dec  7 18:23:14 2025] [INFO] getHomeStatus called.
+[Sun Dec  7 18:23:14 2025] [INFO] Displaying state: OK
+[Sun Dec  7 18:23:52 2025] [INFO] addDevice: LIGHT LIVINGROOMLIGHT
+[Sun Dec  7 18:24:10 2025] [INFO] powerOnDevice: LIGHT
+[Sun Dec  7 18:24:14 2025] [INFO] getHomeStatus called.
+[Sun Dec  7 18:24:14 2025] [INFO] Displaying state: OK
+[Sun Dec  7 18:24:42 2025] [INFO] addDevice: Light LivingRoom
+[Sun Dec  7 18:24:44 2025] [INFO] getHomeStatus called.
+[Sun Dec  7 18:24:44 2025] [INFO] Displaying state: OK
+[Sun Dec  7 18:24:57 2025] [INFO] powerOnDevice: Light
+[Sun Dec  7 18:25:09 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 18:25:12 2025] [ALERT] Alarm triggered by DetectionManager.
+[Sun Dec  7 18:25:12 2025] [ALERT] Alarm activated.
+[Sun Dec  7 18:25:17 2025] [INFO] Alarm acknowledged by user.
+[Sun Dec  7 18:25:17 2025] [INFO] User acknowledged alarm.
+[Sun Dec  7 18:25:17 2025] [INFO] Simulation complete.
+[Sun Dec  7 18:25:20 2025] [SYSTEM] Shutdown requested.
+[SYSTEM] MSH shutting down.
+=========================
+[SYSTEM] MSH started at: Sun Dec  7 18:25:41 2025
+=========================
+[Sun Dec  7 18:25:41 2025] [INFO] ModeManager initialized (Home mode).
+[Sun Dec  7 18:25:41 2025] [INFO] StateManager initialized.
+[Sun Dec  7 18:25:41 2025] [INFO] SecurityManager initialized.
+[Sun Dec  7 18:25:41 2025] [INFO] MSHController initialized.
+[Sun Dec  7 18:25:45 2025] [INFO] getHomeStatus called.
+[Sun Dec  7 18:25:45 2025] [INFO] Displaying state: OK
+[Sun Dec  7 18:26:15 2025] [INFO] addDevice: Light LivingRoomLight
+[Sun Dec  7 18:27:08 2025] [INFO] powerOnDevice: LivingRoomLight
+[Sun Dec  7 18:27:24 2025] [INFO] getHomeStatus called.
+[Sun Dec  7 18:27:24 2025] [INFO] Displaying state: OK
+[Sun Dec  7 18:28:12 2025] [ALERT] Starting scenario simulation.
+[Sun Dec  7 18:28:15 2025] [ALERT] Alarm triggered by DetectionManager.
+[Sun Dec  7 18:28:15 2025] [ALERT] Alarm activated.
+[Sun Dec  7 18:28:25 2025] [ALERT] Police notified by DetectionManager.
+[Sun Dec  7 18:28:25 2025] [ALERT] Calling police due to security breach.
+[Sun Dec  7 18:28:25 2025] [ALERT] Escalation triggered.
+[Sun Dec  7 18:28:25 2025] [INFO] Simulation complete.
+[Sun Dec  7 18:28:53 2025] [INFO] Mode changed to: Away
+[Sun Dec  7 18:28:53 2025] [INFO] changeMode: Away
+[Sun Dec  7 18:28:59 2025] [INFO] getHomeStatus called.
+[Sun Dec  7 18:28:59 2025] [INFO] Displaying state: OK
+[Sun Dec  7 18:29:46 2025] [INFO] State changed to: security trigger
+[Sun Dec  7 18:29:46 2025] [INFO] changeState: security trigger
+[Sun Dec  7 18:33:13 2025] [SYSTEM] Shutdown requested.
+[SYSTEM] MSH shutting down.

@@ -3,45 +3,21 @@
 
 #include <string>
 
-enum class DeviceType {
-    Light,
-    Camera,
-    SamsungTV,
-    LGTV,
-    SmokeDetector,
-    GasDetector,
-    Alarm
-};
-
 class Device {
 protected:
-    int id;
     std::string name;
-    DeviceType type;
-    bool isActive;
-    bool isBroken;
+    bool power;
 
 public:
-    Device(int id,
-           const std::string& name,
-           DeviceType type)
-        : id(id), name(name), type(type),
-          isActive(false), isBroken(false) {}
+    Device(const std::string& name);
+    virtual ~Device();
 
-    virtual ~Device() = default;
+    virtual void turnOn();
+    virtual void turnOff();
+    virtual std::string getStatus() const;
+    virtual bool testOperation() const;
 
-    int getId() const { return id; }
     std::string getName() const { return name; }
-    DeviceType getType() const { return type; }
-
-    bool getIsActive() const { return isActive; }
-    bool getIsBroken() const { return isBroken; }
-
-    virtual void turnOn() = 0;
-    virtual void turnOff() = 0;
-
-    virtual std::string getStatus() const = 0;
-    virtual void testOperation() = 0;
 };
 
-#endif // DEVICE_H
+#endif

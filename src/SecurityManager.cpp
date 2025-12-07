@@ -38,3 +38,9 @@ void SecurityManager::detectMotion() {
 void SecurityManager::callPolice() {
     if (log_) log_->log("ALERT", "Calling police due to security breach.");
 }
+
+void SecurityManager::activateAlarm() {
+    alarmActive_ = true;
+    alarmAcknowledged_ = false;
+    if (log_) log_->log("ALERT", "Alarm activated.");
+}

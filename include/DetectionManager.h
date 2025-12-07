@@ -1,24 +1,19 @@
 #ifndef DETECTION_MANAGER_H
 #define DETECTION_MANAGER_H
 
-#include <string>
-
-class LogManager;
-class SecurityManager;
+#include "SecurityManager.h"
+#include "LogManager.h"
 
 class DetectionManager {
 public:
-    DetectionManager(SecurityManager* security, LogManager* logger);
-    ~DetectionManager();
+    DetectionManager(SecurityManager* securityManager, LogManager* logger);
 
-    void detectMotion();          // Called when motion is detected
-    void triggerAlarm();          // Forces alarm
-    void callPolice();            // Escalation
+    void triggerAlarm();
+    void callPolice();
 
 private:
-    SecurityManager* security_ = nullptr;
-    LogManager* log_ = nullptr;
-    int detectionCount_ = 0;
+    SecurityManager* m_securityManager;
+    LogManager* m_logger;
 };
 
-#endif // DETECTION_MANAGER_H
+#endif

@@ -4,42 +4,39 @@
 #include <memory>
 #include <string>
 
-#include "LogManager.h"
-#include "DeviceManagerBase.h"
-#include "ModeManagerBase.h"
-#include "StateManagerBase.h"
+#include "DeviceManager.h"
+#include "ModeManager.h"
+#include "StateManager.h"
 #include "SecurityManager.h"
 #include "DetectionManager.h"
+#include "LogManager.h"
 
 class MSHController {
 public:
-    // NEW: constructor accepts LogManager*
     MSHController(LogManager* logManager);
 
-    // Main control loop is now handled by Menu, not here
     void initialize();
     void cleanup();
 
-    // Actions invoked by Menu
     void addDevice();
     void removeDevice();
     void changeMode();
     void changeState();
     void getHomeStatus();
-    void runScenarioSimulation();   // renamed from runSimulation()
+    void runScenarioSimulation();
     void about();
     void shutdown();
     void powerOnDevice();
-void powerOffDevice();
+    void powerOffDevice();
 
 private:
-    LogManager* m_logManager;  // no unique_ptr — owned by main
+    LogManager* m_logManager;
 
-    std::unique_ptr<DeviceManagerBase> m_deviceManager;
-    std::unique_ptr<ModeManagerBase>   m_modeManager;
-    std::unique_ptr<StateManagerBase>  m_stateManager;
+    std::unique_ptr<DeviceManager>   m_deviceManager;
+    std::unique_ptr<ModeManager>     m_modeManager;
+    std::unique_ptr<StateManager>    m_stateManager;
     std::unique_ptr<SecurityManager> m_securityManager;
-std::unique_ptr<DetectionManager> m_detectionManager;
+    std::unique_ptr<DetectionManager> m_detectionManager;
 };
 
 #endif

@@ -1,50 +1,67 @@
-#include "../include/DeviceManager.h"
-#include "../include/LogManager.h"
+#include "DeviceManager.h"
+#include "DeviceFactory.h"
+#include <iostream>
 
-DeviceManager::DeviceManager(LogManager* logger)
-    : log_(logger) {
-    if (log_) log_->log("INFO", "DeviceManager initialized.");
-}
+DeviceManager::DeviceManager() {}
 
 DeviceManager::~DeviceManager() {
-    if (log_) log_->log("INFO", "DeviceManager shutting down.");
+    for (auto& pair : devices)
+        delete pair.second;
 }
 
-void DeviceManager::addDevice(const std::string& name) {
-    devices_[name] = false;
-    if (log_) log_->log("INFO", "Device added: " + name);
+void DeviceManager::addDevice(const std::string& type, const std::string& name) {
+    if (devices.count(name)) {
+        std::cout << "Device already exists.\n";
+        return;
+    }
+
+    Device* d = DeviceFactory::createDevice(type, name);
+    if (!d) {
+        std::cout << "Unknown device type.\n";
+        return;
+    }
+
+    devices[name] = d;
+    std::cout << "Added " << type << " named " << name << ".\n";
 }
 
 void DeviceManager::removeDevice(const std::string& name) {
-    devices_.erase(name);
-    if (log_) log_->log("INFO", "Device removed: " + name);
-}
-
-void DeviceManager::setPowerState(const std::string& name, bool on) {
-    auto it = devices_.find(name);
-    if (it != devices_.end()) {
-        it->second = on;
-        if (log_) log_->log("INFO", std::string("Power ") + (on?"ON":"OFF") + " for " + name);
-    } else {
-        if (name == "AllLights") {
-            for (auto &p : devices_) {
-                if (p.first.find("Light") != std::string::npos) p.second = on;
-            }
-            if (log_) log_->log("INFO", std::string("Power ") + (on?"ON":"OFF") + " for AllLights");
-        } else if (log_) {
-            log_->log("WARN", "Unknown device: " + name);
-        }
+    if (!devices.count(name)) {
+        std::cout << "Device not found.\n";
+        return;
     }
+
+    delete devices[name];
+    devices.erase(name);
+    std::cout << "Removed device " << name << ".\n";
 }
 
-std::string DeviceManager::getStatus() {
-    std::string out;
-    for (auto &p : devices_) out += p.first + "=" + (p.second?"ON":"OFF") + "; ";
-    if (out.empty()) out = "No devices registered.";
-    if (log_) log_->log("INFO", "Device status requested.");
-    return out;
+void DeviceManager::powerOnDevice(const std::string& name) {
+    if (!devices.count(name)) {
+        std::cout << "Device not found.\n";
+        return;
+    }
+
+    devices[name]->turnOn();
+    std::cout << name << " turned ON.\n";
 }
 
-void DeviceManager::simulateLightFailure(const std::string& name) {
-    if (log_) log_->log("ERROR", "Light failure on " + name + ". Sending SMS to owner.");
+void DeviceManager::powerOffDevice(const std::string& name) {
+    if (!devices.count(name)) {
+        std::cout << "Device not found.\n";
+        return;
+    }
+
+    devices[name]->turnOff();
+    std::cout << name << " turned OFF.\n";
+}
+
+void DeviceManager::listDevices() const {
+    if (devices.empty()) {
+        std::cout << "No devices added.\n";
+        return;
+    }
+
+    for (const auto& pair : devices)
+        std::cout << pair.first << ": " << pair.second->getStatus() << "\n";
 }

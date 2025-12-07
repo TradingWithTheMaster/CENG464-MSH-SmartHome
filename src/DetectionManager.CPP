@@ -1,34 +1,17 @@
 #include "../include/DetectionManager.h"
-#include "../include/SecurityManager.h"
-#include "../include/LogManager.h"
+#include <iostream>
 
-DetectionManager::DetectionManager(SecurityManager* security, LogManager* logger)
-    : security_(security), log_(logger), detectionCount_(0) {}
-
-DetectionManager::~DetectionManager() {}
-
-void DetectionManager::detectMotion() {
-    detectionCount_++;
-
-    if (log_)
-        log_->log("INFO", "Motion detected! Count = " + std::to_string(detectionCount_));
-
-    if (security_)
-        security_->triggerAlarm("Motion detected");
-}
+DetectionManager::DetectionManager(SecurityManager* securityManager, LogManager* logger)
+    : m_securityManager(securityManager), m_logger(logger) {}
 
 void DetectionManager::triggerAlarm() {
-    if (log_)
-        log_->log("ALERT", "DetectionManager: Triggering alarm...");
-
-    if (security_)
-        security_->triggerAlarm("Forced alarm trigger");
+    std::cout << "DetectionManager: Alarm triggered!\n";
+    if (m_logger) m_logger->log("ALERT", "Alarm triggered by DetectionManager.");
+    m_securityManager->activateAlarm();
 }
 
 void DetectionManager::callPolice() {
-    if (log_)
-        log_->log("ALERT", "DetectionManager: Calling police...");
-
-    if (security_)
-        security_->callPolice();
+    std::cout << "DetectionManager: Police have been notified.\n";
+    if (m_logger) m_logger->log("ALERT", "Police notified by DetectionManager.");
+    m_securityManager->callPolice();
 }

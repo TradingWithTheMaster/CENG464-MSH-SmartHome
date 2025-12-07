@@ -15,6 +15,8 @@ public:
     void acknowledgeAlarm();
     bool isAlarmActive() const;
     bool isAlarmAcknowledged() const;
+    void activateAlarm();
+
 
     void detectMotion();
     void callPolice();

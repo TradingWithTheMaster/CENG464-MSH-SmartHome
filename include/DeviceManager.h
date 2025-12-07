@@ -1,26 +1,23 @@
 #ifndef DEVICE_MANAGER_H
 #define DEVICE_MANAGER_H
 
-#include "DeviceManagerBase.h"
-#include <string>
 #include <map>
+#include <string>
+#include "Device.h"
 
-class LogManager;
-
-class DeviceManager : public DeviceManagerBase {
-public:
-    explicit DeviceManager(LogManager* logger);
-    ~DeviceManager() override;
-
-    void addDevice(const std::string& name) override;
-    void removeDevice(const std::string& name) override;
-    void setPowerState(const std::string& name, bool on) override;
-    std::string getStatus() override;
-    void simulateLightFailure(const std::string& name) override;
-
+class DeviceManager {
 private:
-    LogManager* log_ = nullptr;
-    std::map<std::string, bool> devices_;
+    std::map<std::string, Device*> devices;
+
+public:
+    DeviceManager();
+    ~DeviceManager();
+
+    void addDevice(const std::string& type, const std::string& name);
+    void removeDevice(const std::string& name);
+    void powerOnDevice(const std::string& name);
+    void powerOffDevice(const std::string& name);
+    void listDevices() const;
 };
 
-#endif // DEVICE_MANAGER_H
+#endif
