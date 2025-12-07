@@ -2,6 +2,7 @@
 #define MODE_MANAGER_H
 
 #include <string>
+#include "LogManager.h"
 
 enum class Mode {
     NORMAL,
@@ -13,7 +14,7 @@ enum class Mode {
 
 class ModeManager {
 public:
-    ModeManager();
+    ModeManager(LogManager* logger = nullptr);
 
     void setMode(Mode newMode);
     Mode getCurrentMode() const;
@@ -22,6 +23,7 @@ public:
 
 private:
     Mode currentMode;
+    LogManager* logManager;
 };
 
 #endif
